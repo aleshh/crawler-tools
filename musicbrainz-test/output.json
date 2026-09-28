@@ -1,0 +1,175 @@
+[
+  {
+    "input": {
+      "artist": [
+        "Saint Vengeur"
+      ],
+      "album": "GODLESS TONIGHT"
+    },
+    "candidates": [
+      {
+        "mbid": "df4842b3-4182-4420-a5f1-b385151a8b24",
+        "score": 100,
+        "title": "GODLESS TONIGHT",
+        "firstReleaseDate": "2026-09-04",
+        "primaryType": "Album",
+        "artists": [
+          "SAINT VENGEUR"
+        ]
+      }
+    ],
+    "bestMatch": {
+      "mbid": "df4842b3-4182-4420-a5f1-b385151a8b24",
+      "title": "GODLESS TONIGHT",
+      "urls": []
+    }
+  },
+  {
+    "input": {
+      "artist": [
+        "Raphael Weinroth-Browne"
+      ],
+      "album": "Dissolution"
+    },
+    "candidates": [],
+    "bestMatch": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Raphael Weinroth-Browne"
+      ],
+      "album": "Empyrean"
+    },
+    "candidates": [
+      {
+        "mbid": "acd140cd-d71f-42fc-80b8-01eb03303189",
+        "score": 100,
+        "title": "Empyrean",
+        "firstReleaseDate": "2026-09-11",
+        "primaryType": "Album",
+        "artists": [
+          "Raphael Weinroth‐Browne"
+        ]
+      }
+    ],
+    "bestMatch": {
+      "mbid": "acd140cd-d71f-42fc-80b8-01eb03303189",
+      "title": "Empyrean",
+      "urls": []
+    }
+  },
+  {
+    "input": {
+      "artist": [
+        "Raphael Weinroth-Browne"
+      ],
+      "album": "Pyre"
+    },
+    "candidates": [
+      {
+        "mbid": "f6d1d7be-ae59-4583-80ca-06606d52d8a0",
+        "score": 100,
+        "title": "Pyre",
+        "firstReleaseDate": "2025-09-12",
+        "primaryType": "Single",
+        "artists": [
+          "Raphael Weinroth‐Browne"
+        ]
+      }
+    ],
+    "bestMatch": {
+      "mbid": "f6d1d7be-ae59-4583-80ca-06606d52d8a0",
+      "title": "Pyre",
+      "urls": []
+    }
+  },
+  {
+    "input": {
+      "artist": [
+        "Tiana Major9"
+      ],
+      "album": "November Scorpio: Deluxe"
+    },
+    "error": "MusicBrainz 503: {\"error\": \"The MusicBrainz web server is currently busy. Please try again later.\"}\n"
+  },
+  {
+    "input": {
+      "artist": [
+        "Nivea"
+      ],
+      "album": "Nivea"
+    },
+    "error": "MusicBrainz 503: {\"error\": \"The MusicBrainz web server is currently busy. Please try again later.\"}\n"
+  },
+  {
+    "input": {
+      "artist": [
+        "Thievery Corporation"
+      ],
+      "album": "Thievery 30"
+    },
+    "candidates": [],
+    "bestMatch": null
+  },
+  {
+    "input": {
+      "artist": [
+        "INOHA"
+      ],
+      "album": "This Might Be Useful"
+    },
+    "candidates": [
+      {
+        "mbid": "642402ad-88b5-438c-801a-59dba162adf0",
+        "score": 100,
+        "title": "This Might Be Useful",
+        "firstReleaseDate": "2026-09-04",
+        "primaryType": "Album",
+        "artists": [
+          "INOHA"
+        ]
+      }
+    ],
+    "bestMatch": {
+      "mbid": "642402ad-88b5-438c-801a-59dba162adf0",
+      "title": "This Might Be Useful",
+      "urls": []
+    }
+  },
+  {
+    "input": {
+      "artist": [
+        "Caiola"
+      ],
+      "album": "This Could Be Everything"
+    },
+    "candidates": [
+      {
+        "mbid": "412b7c4e-d4c8-49bf-b54f-968c9672ae1b",
+        "score": 100,
+        "title": "This Could Be Everything",
+        "firstReleaseDate": "2024-08-02",
+        "primaryType": "Album",
+        "artists": [
+          "Caiola"
+        ]
+      }
+    ],
+    "bestMatch": {
+      "mbid": "412b7c4e-d4c8-49bf-b54f-968c9672ae1b",
+      "title": "This Could Be Everything",
+      "urls": []
+    }
+  },
+  {
+    "input": {
+      "artist": [
+        "Tiiva"
+      ],
+      "album": "this could be a start"
+    },
+    "candidates": [],
+    "bestMatch": null
+  }
+]
