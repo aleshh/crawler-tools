@@ -1,3 +1,7 @@
+// release-test.ts
+//
+// npx tsx release-test.ts input.json > results.json
+
 import fs from "node:fs/promises";
 
 type InputAlbum = {
@@ -11,9 +15,13 @@ const INTERVAL = 1100;
 
 let lastRequest = 0;
 
+async function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function mbFetch(path: string, attempt = 0): Promise<any> {
   const wait = Math.max(0, INTERVAL - (Date.now() - lastRequest));
-  if (wait) await new Promise(r => setTimeout(r, wait));
+  if (wait) await sleep(wait);
 
   lastRequest = Date.now();
 
@@ -27,12 +35,15 @@ async function mbFetch(path: string, attempt = 0): Promise<any> {
   if (response.status === 503 && attempt < 5) {
     const delay = 2000 * 2 ** attempt;
     console.error(`503 — retrying in ${delay / 1000}s`);
-    await new Promise(r => setTimeout(r, delay));
+    await sleep(delay);
     return mbFetch(path, attempt + 1);
   }
 
-  if (!response.ok)
-    throw new Error(`MusicBrainz ${response.status}: ${await response.text()}`);
+  if (!response.ok) {
+    throw new Error(
+      `MusicBrainz ${response.status}: ${await response.text()}`
+    );
+  }
 
   return response.json();
 }
@@ -41,24 +52,15 @@ function quote(s: string) {
   return `"${s.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 }
 
-async function main() {
-  const filename = process.argv[2];
-  if (!filename) throw new Error("Provide input JSON");
-
-  const albums: InputAlbum[] =
-    JSON.parse(await fs.readFile(filename, "utf8"));
-
-  // Pick Caiola from the existing input
-  const input = albums.find(
-    a => a.artist.includes("Caiola") &&
-         a.album === "This Could Be Everything"
+async function processAlbum(input: InputAlbum) {
+  console.error(
+    `\nSearching: ${input.artist.join(", ")} — ${input.album}`
   );
 
-  if (!input) throw new Error("Caiola album not found");
-
-  // Find release group
+  // 1. Find release group
   const query =
-    `releasegroup:${quote(input.album)} AND artist:${quote(input.artist.join(" "))}`;
+    `releasegroup:${quote(input.album)} ` +
+    `AND artist:${quote(input.artist.join(" "))}`;
 
   const search = await mbFetch(
     `/release-group?${new URLSearchParams({
@@ -68,13 +70,25 @@ async function main() {
     })}`
   );
 
-  const rg = search["release-groups"]?.[0];
-  if (!rg) throw new Error("No release group found");
+  const candidates = search["release-groups"] ?? [];
 
-  console.error(`Release group: ${rg.title} (${rg.id})`);
+  if (!candidates.length) {
+    console.error("  No release group found");
 
-  // Browse releases belonging to release group
-  const releases = await mbFetch(
+    return {
+      input,
+      match: null,
+    };
+  }
+
+  const rg = candidates[0];
+
+  console.error(
+    `  Match: ${rg.title} (${rg.id}), score ${rg.score}`
+  );
+
+  // 2. Get releases + URL relationships
+  const releasesResponse = await mbFetch(
     `/release?${new URLSearchParams({
       "release-group": rg.id,
       inc: "artist-credits+url-rels",
@@ -83,36 +97,101 @@ async function main() {
     })}`
   );
 
-  const result = {
+  const releases = releasesResponse.releases ?? [];
+
+  // 3. Preserve release-specific data
+  const releaseResults = releases.map((release: any) => ({
+    mbid: release.id,
+    title: release.title,
+    date: release.date,
+    country: release.country,
+    status: release.status,
+    barcode: release.barcode,
+
+    urls: (release.relations ?? [])
+      .filter((rel: any) => rel.url?.resource)
+      .map((rel: any) => ({
+        type: rel.type,
+        url: rel.url.resource,
+      })),
+  }));
+
+  // 4. Also make a convenient deduplicated list across editions
+  const urlMap = new Map<
+    string,
+    {
+      type: string;
+      url: string;
+    }
+  >();
+
+  for (const release of releaseResults) {
+    for (const relation of release.urls) {
+      if (!urlMap.has(relation.url)) {
+        urlMap.set(relation.url, relation);
+      }
+    }
+  }
+
+  const urls = [...urlMap.values()];
+
+  console.error(
+    `  ${releases.length} release(s), ${urls.length} unique URL(s)`
+  );
+
+  return {
     input,
-    releaseGroup: {
-      mbid: rg.id,
+
+    match: {
+      releaseGroupMbid: rg.id,
       title: rg.title,
-      score: rg.score,
+      score: Number(rg.score),
+      firstReleaseDate: rg["first-release-date"],
+      primaryType: rg["primary-type"],
     },
 
-    releases: (releases.releases ?? []).map((r: any) => ({
-      mbid: r.id,
-      title: r.title,
-      date: r.date,
-      country: r.country,
-      status: r.status,
-      barcode: r.barcode,
+    urls,
 
-      urls: (r.relations ?? [])
-        .filter((rel: any) => rel.url?.resource)
-        .map((rel: any) => ({
-          type: rel.type,
-          url: rel.url.resource,
-        })),
-    })),
+    releases: releaseResults,
   };
-
-  console.log(JSON.stringify(result, null, 2));
 }
 
-main().catch(err => {
-  console.error(err);
+async function main() {
+  const filename = process.argv[2];
+
+  if (!filename) {
+    throw new Error(
+      "Usage: npx tsx release-test.ts input.json"
+    );
+  }
+
+  const inputs: InputAlbum[] = JSON.parse(
+    await fs.readFile(filename, "utf8")
+  );
+
+  const results = [];
+
+  for (const input of inputs) {
+    try {
+      results.push(await processAlbum(input));
+    } catch (error) {
+      console.error(`  ERROR: ${error}`);
+
+      results.push({
+        input,
+        error:
+          error instanceof Error
+            ? error.message
+            : String(error),
+      });
+    }
+  }
+
+  console.log(JSON.stringify(results, null, 2));
+}
+
+main().catch(error => {
+  console.error(error);
   process.exit(1);
 });
 

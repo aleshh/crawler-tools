@@ -1,0 +1,575 @@
+[
+  {
+    "input": {
+      "artist": [
+        "Saint Vengeur"
+      ],
+      "album": "GODLESS TONIGHT"
+    },
+    "match": {
+      "releaseGroupMbid": "df4842b3-4182-4420-a5f1-b385151a8b24",
+      "title": "GODLESS TONIGHT",
+      "score": 100,
+      "firstReleaseDate": "2026-09-04",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "download for free",
+        "url": "https://saintvengeur.bandcamp.com/album/godless-tonight"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "207f738a-ac06-4cf8-bfe8-be38f6295b64",
+        "title": "GODLESS TONIGHT",
+        "date": "2026-09-04",
+        "country": "XW",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "download for free",
+            "url": "https://saintvengeur.bandcamp.com/album/godless-tonight"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://saintvengeur.bandcamp.com/album/godless-tonight"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://saintvengeur.bandcamp.com/album/godless-tonight"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Raphael Weinroth-Browne"
+      ],
+      "album": "Dissolution"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Raphael Weinroth-Browne"
+      ],
+      "album": "Empyrean"
+    },
+    "match": {
+      "releaseGroupMbid": "acd140cd-d71f-42fc-80b8-01eb03303189",
+      "title": "Empyrean",
+      "score": 100,
+      "firstReleaseDate": "2026-09-11",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "purchase for download",
+        "url": "https://raphaelweinroth-browne.bandcamp.com/album/empyrean"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/album/2pg9rg08rt95ZYGpmWCLjE"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.deezer.com/album/1034924912"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://itunes.apple.com/ca/album/id6793336146"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://music.apple.com/ca/album/6793336146"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://www.qobuz.com/ca-en/album/empyrean-raphael-weinroth-browne/wj8vcad87plvd"
+      },
+      {
+        "type": "streaming",
+        "url": "https://open.qobuz.com/album/wj8vcad87plvd"
+      },
+      {
+        "type": "streaming",
+        "url": "https://tidal.com/album/545259707"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "0a1681b0-95e1-4fca-a683-a072fed8c0f6",
+        "title": "Empyrean",
+        "date": "2026-09-11",
+        "country": "XW",
+        "status": "Official",
+        "barcode": "",
+        "urls": [
+          {
+            "type": "purchase for download",
+            "url": "https://raphaelweinroth-browne.bandcamp.com/album/empyrean"
+          }
+        ]
+      },
+      {
+        "mbid": "0db97280-dfed-4f16-9e79-62f69f167caf",
+        "title": "Empyrean",
+        "date": "2026-09-11",
+        "country": "XW",
+        "status": "Official",
+        "barcode": "882197959008",
+        "urls": [
+          {
+            "type": "free streaming",
+            "url": "https://open.spotify.com/album/2pg9rg08rt95ZYGpmWCLjE"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://www.deezer.com/album/1034924912"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://itunes.apple.com/ca/album/id6793336146"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://music.apple.com/ca/album/6793336146"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://www.qobuz.com/ca-en/album/empyrean-raphael-weinroth-browne/wj8vcad87plvd"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.apple.com/ca/album/6793336146"
+          },
+          {
+            "type": "streaming",
+            "url": "https://open.qobuz.com/album/wj8vcad87plvd"
+          },
+          {
+            "type": "streaming",
+            "url": "https://tidal.com/album/545259707"
+          },
+          {
+            "type": "streaming",
+            "url": "https://www.qobuz.com/ca-en/album/empyrean-raphael-weinroth-browne/wj8vcad87plvd"
+          }
+        ]
+      },
+      {
+        "mbid": "d13afb14-38d0-452b-b986-e3003c385856",
+        "title": "Empyrean",
+        "date": "2026-09-11",
+        "country": "XW",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "free streaming",
+            "url": "https://raphaelweinroth-browne.bandcamp.com/album/empyrean"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Raphael Weinroth-Browne"
+      ],
+      "album": "Pyre"
+    },
+    "match": {
+      "releaseGroupMbid": "f6d1d7be-ae59-4583-80ca-06606d52d8a0",
+      "title": "Pyre",
+      "score": 100,
+      "firstReleaseDate": "2025-09-12",
+      "primaryType": "Single"
+    },
+    "urls": [
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/album/6vw1d4dckwnynn6i7SVkS7"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.deezer.com/album/771646341"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://itunes.apple.com/ca/album/id1820395980"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.apple.com/ca/album/1820395980"
+      },
+      {
+        "type": "streaming",
+        "url": "https://tidal.com/album/441746095"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://raphaelweinroth-browne.bandcamp.com/track/pyre"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "043e659c-bad9-4aa1-af08-60a9f13686b9",
+        "title": "Pyre",
+        "date": "2025-09-12",
+        "country": "CA",
+        "status": "Official",
+        "barcode": "199520438216",
+        "urls": [
+          {
+            "type": "free streaming",
+            "url": "https://open.spotify.com/album/6vw1d4dckwnynn6i7SVkS7"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://www.deezer.com/album/771646341"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://itunes.apple.com/ca/album/id1820395980"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.apple.com/ca/album/1820395980"
+          },
+          {
+            "type": "streaming",
+            "url": "https://tidal.com/album/441746095"
+          }
+        ]
+      },
+      {
+        "mbid": "07f0b20e-85d6-4e88-bf5d-716d0a22c586",
+        "title": "Pyre",
+        "date": "2025-09-12",
+        "country": "XW",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "purchase for download",
+            "url": "https://raphaelweinroth-browne.bandcamp.com/track/pyre"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Tiana Major9"
+      ],
+      "album": "November Scorpio: Deluxe"
+    },
+    "match": {
+      "releaseGroupMbid": "73f7dc18-7a18-448d-a5b2-2ed3c9664903",
+      "title": "November Scorpio (Deluxe)",
+      "score": 100,
+      "firstReleaseDate": "2026-08-28",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "streaming",
+        "url": "https://music.apple.com/us/album/6798346405"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "83d554de-fdc1-4187-8951-8c7c95419b82",
+        "title": "November Scorpio (Deluxe)",
+        "date": "2026-08-28",
+        "country": "US",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "streaming",
+            "url": "https://music.apple.com/us/album/6798346405"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Nivea"
+      ],
+      "album": "Nivea"
+    },
+    "match": {
+      "releaseGroupMbid": "dbcdae89-a5f3-37ed-b35d-3a94f8135c29",
+      "title": "Nivea",
+      "score": 100,
+      "firstReleaseDate": "2001",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/2191870"
+      },
+      {
+        "type": "amazon asin",
+        "url": "https://www.amazon.com/gp/product/B00005MK0J"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/399530"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.amazon.de/albums/B0025ETH3U"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/9906173"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/2598818"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "19e647a7-dada-4158-89e9-f413c5b7eb19",
+        "title": "Nivea",
+        "date": "2001",
+        "country": "XE",
+        "status": "Official",
+        "barcode": "638592229624",
+        "urls": [
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/2191870"
+          }
+        ]
+      },
+      {
+        "mbid": "233f767c-5bea-45ac-9028-e41e329060b6",
+        "title": "Nivea",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B00005MK0J"
+          }
+        ]
+      },
+      {
+        "mbid": "33a4412e-fc35-4794-8862-92bcba1eb9fb",
+        "title": "Nivea",
+        "date": "2002",
+        "country": "CA",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B00005MK0J"
+          },
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/399530"
+          }
+        ]
+      },
+      {
+        "mbid": "4d797498-4ece-42b2-ab4c-2f1d0361bf5d",
+        "title": "Nivea",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "streaming",
+            "url": "https://music.amazon.de/albums/B0025ETH3U"
+          }
+        ]
+      },
+      {
+        "mbid": "b268c703-fd13-4835-a8e1-0514207f4155",
+        "title": "Nivea",
+        "date": "2003",
+        "country": "XE",
+        "status": "Official",
+        "barcode": "638592253629",
+        "urls": [
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/9906173"
+          }
+        ]
+      },
+      {
+        "mbid": "b53c9cb9-1d8a-494c-8ec0-b798a0aa40f3",
+        "title": "Nivea",
+        "date": "2003",
+        "country": "XE",
+        "status": "Official",
+        "barcode": "828765361927",
+        "urls": []
+      },
+      {
+        "mbid": "ebe4e3e0-7cd9-4078-a56d-22490cb1837e",
+        "title": "Nivea",
+        "date": "2002-12-10",
+        "country": "US",
+        "status": "Official",
+        "barcode": "012414174628",
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B00005MK0J"
+          },
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/2598818"
+          }
+        ]
+      },
+      {
+        "mbid": "ecb13dfc-47b7-4a05-813e-8e610278ccc4",
+        "title": "Nivea",
+        "date": "2002-12-10",
+        "country": "US",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B00005MK0J"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Thievery Corporation"
+      ],
+      "album": "Thievery 30"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "INOHA"
+      ],
+      "album": "This Might Be Useful"
+    },
+    "match": {
+      "releaseGroupMbid": "642402ad-88b5-438c-801a-59dba162adf0",
+      "title": "This Might Be Useful",
+      "score": 100,
+      "firstReleaseDate": "2026-09-04",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/album/0IaMaF9Eaw1Ssm5TbZxAfi"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.apple.com/gb/album/6783420148"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "4d2de083-a22c-4ae6-98c2-7c6f6f477015",
+        "title": "This Might Be Useful",
+        "date": "2026-09-04",
+        "country": "XW",
+        "status": "Official",
+        "barcode": "193436476867",
+        "urls": [
+          {
+            "type": "free streaming",
+            "url": "https://open.spotify.com/album/0IaMaF9Eaw1Ssm5TbZxAfi"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.apple.com/gb/album/6783420148"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Caiola"
+      ],
+      "album": "This Could Be Everything"
+    },
+    "match": {
+      "releaseGroupMbid": "412b7c4e-d4c8-49bf-b54f-968c9672ae1b",
+      "title": "This Could Be Everything",
+      "score": 100,
+      "firstReleaseDate": "2024-08-02",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/album/1blx6l14QLdPb6rDzzpbov"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.deezer.com/album/596829382"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.apple.com/gb/album/1750315180"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "afb41a6d-b8eb-48f8-ba0e-7fbdf6632970",
+        "title": "This Could Be Everything",
+        "date": "2024-08-02",
+        "country": "XW",
+        "status": "Official",
+        "barcode": "198342856680",
+        "urls": [
+          {
+            "type": "free streaming",
+            "url": "https://open.spotify.com/album/1blx6l14QLdPb6rDzzpbov"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://www.deezer.com/album/596829382"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.apple.com/gb/album/1750315180"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Tiiva"
+      ],
+      "album": "this could be a start"
+    },
+    "match": null
+  }
+]

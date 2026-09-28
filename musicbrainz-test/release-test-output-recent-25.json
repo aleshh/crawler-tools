@@ -1,0 +1,810 @@
+[
+  {
+    "input": {
+      "artist": [
+        "Brunno Carvalho"
+      ],
+      "album": "Acústico",
+      "release_date": "2007"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Andreas Ektoras"
+      ],
+      "album": "Se Diekdiko",
+      "release_date": "2007-02-05"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "London FM",
+        "Flavio Lodetti",
+        "Irregular Synth"
+      ],
+      "album": "Voices From Inside",
+      "release_date": "2009-11-27"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Sergio Vargas"
+      ],
+      "album": "Mis Favoritas",
+      "release_date": "2007"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Antonio Lauro",
+        "Adam Holzman"
+      ],
+      "album": "Lauro: Guitar Music, Vol. 1 - Venezuelan Waltzes",
+      "release_date": "2000-01-11"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Mark Bodino"
+      ],
+      "album": "Spanish Horizon",
+      "release_date": "2016-05-05"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Mick Gordon"
+      ],
+      "album": "DOOM (Original Game Soundtrack)",
+      "release_date": "2016-09-28"
+    },
+    "match": {
+      "releaseGroupMbid": "f40630d4-f52d-403f-81a2-c6904e8acc99",
+      "title": "DOOM: Original Game Soundtrack",
+      "score": 100,
+      "firstReleaseDate": "2016-05-27",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "amazon asin",
+        "url": "https://www.amazon.com/gp/product/B07CLRY86P"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/12318468"
+      },
+      {
+        "type": "purchase for mail-order",
+        "url": "https://gear.bethesda.net/products/doom-deluxe-double-vinyl-record"
+      },
+      {
+        "type": "vgmdb",
+        "url": "https://vgmdb.net/album/80329"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/14384653"
+      },
+      {
+        "type": "vgmdb",
+        "url": "https://vgmdb.net/album/93655"
+      },
+      {
+        "type": "allmusic",
+        "url": "https://www.allmusic.com/album/release/mr0004888738"
+      },
+      {
+        "type": "amazon asin",
+        "url": "https://www.amazon.de/gp/product/B07CNC396W"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/12321482"
+      },
+      {
+        "type": "other databases",
+        "url": "https://rateyourmusic.com/release/album/mick-gordon/doom-original-game-soundtrack-3/"
+      },
+      {
+        "type": "purchase for mail-order",
+        "url": "https://www.lacedrecords.co/products/doom-deluxe-double-cd"
+      },
+      {
+        "type": "vgmdb",
+        "url": "https://vgmdb.net/album/77109"
+      },
+      {
+        "type": "allmusic",
+        "url": "https://www.allmusic.com/album/release/mr0004625200"
+      },
+      {
+        "type": "amazon asin",
+        "url": "https://www.amazon.com/gp/product/B01LYOQNQH"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/9128583"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/album/0KQyC28P9808r0oKKNgHvp"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.deezer.com/album/164408822"
+      },
+      {
+        "type": "other databases",
+        "url": "https://rateyourmusic.com/release/album/mick-gordon/doom-original-game-soundtrack.p/"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://play.google.com/store/music/album?id=Bprrws2k246zctacv56xhlfdz4m"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://itunes.apple.com/us/album/id1157733728"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://www.qobuz.com/se-en/album/doom-original-game-soundtrack-mick-gordon/bqnd8ierieg6b"
+      },
+      {
+        "type": "streaming",
+        "url": "http://tidal.com/us/store/album/65498512"
+      },
+      {
+        "type": "vgmdb",
+        "url": "https://vgmdb.net/album/61948"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "16345711-6bff-49a9-8ef2-e3e5ba241271",
+        "title": "DOOM: Original Game Soundtrack",
+        "date": "2018",
+        "country": "XW",
+        "status": "Official",
+        "barcode": "5053760038962",
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B07CLRY86P"
+          },
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/12318468"
+          },
+          {
+            "type": "purchase for mail-order",
+            "url": "https://gear.bethesda.net/products/doom-deluxe-double-vinyl-record"
+          },
+          {
+            "type": "vgmdb",
+            "url": "https://vgmdb.net/album/80329"
+          }
+        ]
+      },
+      {
+        "mbid": "7cfa2ad4-4d25-4c86-b11a-d26235faed2e",
+        "title": "DOOM: Original Game Soundtrack",
+        "date": "2019-10-21",
+        "country": "XE",
+        "status": "Official",
+        "barcode": null,
+        "urls": [
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/14384653"
+          },
+          {
+            "type": "vgmdb",
+            "url": "https://vgmdb.net/album/93655"
+          }
+        ]
+      },
+      {
+        "mbid": "996d703f-6406-4563-a9f4-bf610760775c",
+        "title": "DOOM",
+        "date": "2016-05-27",
+        "country": "XW",
+        "status": "Bootleg",
+        "barcode": "",
+        "urls": []
+      },
+      {
+        "mbid": "a7c160cc-9636-4801-962c-19ed7f8907d4",
+        "title": "DOOM: Original Game Soundtrack",
+        "date": "2018-07-27",
+        "country": "XE",
+        "status": "Official",
+        "barcode": "5053760038986",
+        "urls": [
+          {
+            "type": "allmusic",
+            "url": "https://www.allmusic.com/album/release/mr0004888738"
+          },
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.de/gp/product/B07CNC396W"
+          },
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/12321482"
+          },
+          {
+            "type": "other databases",
+            "url": "https://rateyourmusic.com/release/album/mick-gordon/doom-original-game-soundtrack-3/"
+          },
+          {
+            "type": "purchase for mail-order",
+            "url": "https://www.lacedrecords.co/products/doom-deluxe-double-cd"
+          },
+          {
+            "type": "vgmdb",
+            "url": "https://vgmdb.net/album/77109"
+          }
+        ]
+      },
+      {
+        "mbid": "d6b86d52-717c-4051-a097-2ca6744f127a",
+        "title": "DOOM Complete Video Game Score",
+        "date": "",
+        "country": "XW",
+        "status": "Bootleg",
+        "barcode": null,
+        "urls": []
+      },
+      {
+        "mbid": "f303630d-9a60-4251-9d2c-4fbe0b0b2752",
+        "title": "DOOM: Original Game Soundtrack",
+        "date": "2016-09-28",
+        "country": "XW",
+        "status": "Official",
+        "barcode": "093155170599",
+        "urls": [
+          {
+            "type": "allmusic",
+            "url": "https://www.allmusic.com/album/release/mr0004625200"
+          },
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B01LYOQNQH"
+          },
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/9128583"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://open.spotify.com/album/0KQyC28P9808r0oKKNgHvp"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://www.deezer.com/album/164408822"
+          },
+          {
+            "type": "other databases",
+            "url": "https://rateyourmusic.com/release/album/mick-gordon/doom-original-game-soundtrack.p/"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://play.google.com/store/music/album?id=Bprrws2k246zctacv56xhlfdz4m"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://itunes.apple.com/us/album/id1157733728"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://www.qobuz.com/se-en/album/doom-original-game-soundtrack-mick-gordon/bqnd8ierieg6b"
+          },
+          {
+            "type": "streaming",
+            "url": "http://tidal.com/us/store/album/65498512"
+          },
+          {
+            "type": "vgmdb",
+            "url": "https://vgmdb.net/album/61948"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Musumeci"
+      ],
+      "album": "The Gemini Project",
+      "release_date": "2014-09-01"
+    },
+    "match": {
+      "releaseGroupMbid": "4cc0800a-1b75-49cf-a460-47187e8cb643",
+      "title": "The Gemini Project",
+      "score": 100,
+      "firstReleaseDate": "2014-09-01",
+      "primaryType": "EP"
+    },
+    "urls": [
+      {
+        "type": "amazon asin",
+        "url": "https://www.amazon.co.uk/gp/product/B01EX75KO6"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://musumeci.bandcamp.com/album/the-gemini-project-ep"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "643ad35e-5d6e-4602-a700-189ad917c425",
+        "title": "The Gemini Project",
+        "date": "2014-09-01",
+        "country": null,
+        "status": null,
+        "barcode": null,
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.co.uk/gp/product/B01EX75KO6"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://musumeci.bandcamp.com/album/the-gemini-project-ep"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Wahlberg"
+      ],
+      "album": "En sista dans",
+      "release_date": "2017-09-25"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Georg Philipp Telemann",
+        "Klaus Mertens",
+        "Stefan Maass",
+        "Thomas Fritzsch",
+        "Michael Schönheit"
+      ],
+      "album": "Telemannisches Gesangbuch",
+      "release_date": "2013-01-01"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Jackson Dean"
+      ],
+      "album": "Heavens To Betsy",
+      "release_date": "2024-08-02"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Harmonic Miracles",
+        "The Solfeggio Architect"
+      ],
+      "album": "Transformation & Miracles (DNA Repair)",
+      "release_date": "2024-08-27"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Leo Leonski"
+      ],
+      "album": "Latinamericana",
+      "release_date": "2021-09-30"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Kristian Kristensen"
+      ],
+      "album": "Living room sessions",
+      "release_date": "2020-01-17"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Gerardo Millán"
+      ],
+      "album": "Quantum Serenity",
+      "release_date": "2023-11-30"
+    },
+    "match": {
+      "releaseGroupMbid": "569b2544-3e49-46fd-bb6a-4600ef20b85d",
+      "title": "Quantum Serenity",
+      "score": 100,
+      "firstReleaseDate": "2023-11-30",
+      "primaryType": "EP"
+    },
+    "urls": [
+      {
+        "type": "amazon asin",
+        "url": "https://www.amazon.com/gp/product/B0CMJ5QC7Z"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://lofigirl.bandcamp.com/album/quantum-serenity"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/album/39da6tci4EgJD328BbQQuE"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://soundcloud.com/geromillan/sets/quantum-serenity"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://soundcloud.com/lofi_girl/quantum-serenity"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.deezer.com/album/508460011"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.youtube.com/watch?v=pb39n_bEHyA"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://music.apple.com/us/album/1714980665"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.amazon.com/albums/B0CMJ5QC7Z"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.youtube.com/playlist?list=OLAK5uy_ko7LsE-DwBwGfRo_rb7mJ6Nsuz679M2PI"
+      },
+      {
+        "type": "streaming",
+        "url": "https://tidal.com/album/326552663"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "a23319d3-25b5-48fd-9f47-4066431e0b66",
+        "title": "Quantum Serenity",
+        "date": "2023-11-30",
+        "country": "XW",
+        "status": "Official",
+        "barcode": "7316476009809",
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B0CMJ5QC7Z"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://lofigirl.bandcamp.com/album/quantum-serenity"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://open.spotify.com/album/39da6tci4EgJD328BbQQuE"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://soundcloud.com/geromillan/sets/quantum-serenity"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://soundcloud.com/lofi_girl/quantum-serenity"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://www.deezer.com/album/508460011"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://www.youtube.com/watch?v=pb39n_bEHyA"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://lofigirl.bandcamp.com/album/quantum-serenity"
+          },
+          {
+            "type": "purchase for download",
+            "url": "https://music.apple.com/us/album/1714980665"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.amazon.com/albums/B0CMJ5QC7Z"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.apple.com/us/album/1714980665"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.youtube.com/playlist?list=OLAK5uy_ko7LsE-DwBwGfRo_rb7mJ6Nsuz679M2PI"
+          },
+          {
+            "type": "streaming",
+            "url": "https://tidal.com/album/326552663"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Dragana Mirkovic"
+      ],
+      "album": "Najveci hitovi 1",
+      "release_date": "2026-02-23"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Christophe Godin"
+      ],
+      "album": "Dancing in a Minefield",
+      "release_date": "2025-11-25"
+    },
+    "match": {
+      "releaseGroupMbid": "f63b1bb9-d463-46dc-a062-451e5561168f",
+      "title": "Dancing in a Minefield",
+      "score": 100,
+      "firstReleaseDate": "2025-11-28",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "purchase for mail-order",
+        "url": "https://christophegodin.bandcamp.com/album/dancing-in-a-minefield-lp-version"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "7679dad8-7216-4119-9fa0-e9af488150d5",
+        "title": "Dancing in a Minefield",
+        "date": "2025-11-28",
+        "country": "FR",
+        "status": "Official",
+        "barcode": "",
+        "urls": [
+          {
+            "type": "purchase for mail-order",
+            "url": "https://christophegodin.bandcamp.com/album/dancing-in-a-minefield-lp-version"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Mira Falkenstein"
+      ],
+      "album": "Let The Journey Unfold",
+      "release_date": "2026-03-06"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Daniel Beckstead"
+      ],
+      "album": "The Storm",
+      "release_date": "2025-03-29"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Rowan Pierce"
+      ],
+      "album": "Loop Theory of the Modern Soul",
+      "release_date": "2025-10-21"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Eri Hiramatsu"
+      ],
+      "album": "Tsuki no Lamp",
+      "release_date": "1990"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Jacob Gade",
+        "Dmitri Kitayenko",
+        "Danish National Symphony Orchestra"
+      ],
+      "album": "Gade: Symphony No. 1, Hamlet Overture & Echoes of Ossian Overture",
+      "release_date": "1995-12-01"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Tony O'Connor"
+      ],
+      "album": "Dreamtime",
+      "release_date": "1997-12-31"
+    },
+    "match": {
+      "releaseGroupMbid": "f563e9a3-009e-4f7c-8244-632dcf05c02b",
+      "title": "Dreamtime",
+      "score": 100,
+      "firstReleaseDate": "1999",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "discography entry",
+        "url": "http://tonyoconnor.com.au/albumpages/dreamtime.htm"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/8760609"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "ddfe073e-f763-4746-88b1-2c640599c46c",
+        "title": "Dreamtime",
+        "date": "1999",
+        "country": "AU",
+        "status": "Official",
+        "barcode": "9317339000245",
+        "urls": [
+          {
+            "type": "discography entry",
+            "url": "http://tonyoconnor.com.au/albumpages/dreamtime.htm"
+          },
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/8760609"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "artist": [
+        "Talking Heads"
+      ],
+      "album": "Once In A Lifetime: The Talking Heads Box (US Release)",
+      "release_date": "1992-10-12"
+    },
+    "match": null
+  },
+  {
+    "input": {
+      "artist": [
+        "Sylvia Telles"
+      ],
+      "album": "The Music Of Mr. Jobim",
+      "release_date": "1965-01-04"
+    },
+    "match": {
+      "releaseGroupMbid": "15a34532-fd86-3af5-a512-2cc6b538ce52",
+      "title": "The Music of Mr. Jobim",
+      "score": 100,
+      "firstReleaseDate": "1966",
+      "primaryType": "Album"
+    },
+    "urls": [
+      {
+        "type": "amazon asin",
+        "url": "https://www.amazon.com/gp/product/B00009VGFN"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/album/1gSshJ8VVxxkfmSoWtEXVg"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.deezer.com/album/45622301"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.apple.com/gb/album/1442708741"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/release/3891189"
+      }
+    ],
+    "releases": [
+      {
+        "mbid": "a4afccd0-d7ef-46b9-a8ec-aeba37c5f69c",
+        "title": "The Music of Mr. Jobim",
+        "date": "2003-11-25",
+        "country": "BR",
+        "status": "Official",
+        "barcode": "3259120043825",
+        "urls": [
+          {
+            "type": "amazon asin",
+            "url": "https://www.amazon.com/gp/product/B00009VGFN"
+          }
+        ]
+      },
+      {
+        "mbid": "a8f26d5b-0184-47e7-8a9d-4664e6dd3297",
+        "title": "The Music of Mr. Jobim",
+        "date": "2017-08-04",
+        "country": "AF",
+        "status": "Official",
+        "barcode": "00602557876451",
+        "urls": [
+          {
+            "type": "free streaming",
+            "url": "https://open.spotify.com/album/1gSshJ8VVxxkfmSoWtEXVg"
+          },
+          {
+            "type": "free streaming",
+            "url": "https://www.deezer.com/album/45622301"
+          },
+          {
+            "type": "streaming",
+            "url": "https://music.apple.com/gb/album/1442708741"
+          }
+        ]
+      },
+      {
+        "mbid": "ef615300-983a-425b-be97-f7abfcf13264",
+        "title": "The Music of Mr. Jobim",
+        "date": "1966",
+        "country": "BR",
+        "status": "Official",
+        "barcode": "",
+        "urls": [
+          {
+            "type": "discogs",
+            "url": "https://www.discogs.com/release/3891189"
+          }
+        ]
+      }
+    ]
+  }
+]
