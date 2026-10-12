@@ -767,8 +767,18 @@ if (options) {
         console.error(`Fetching ${currentUrl}`);
       }
 
-      const response = await fetchWithRetries(currentUrl);
-      const html = await response.text();
+      // Pitchfork serves pages past the end of the listing (page 93 as of
+      // October 2026) as "Page Not Found" with HTTP 500.
+      let response = await fetchWithRetries(currentUrl, new Set([500]));
+      let html = await response.text();
+      if (response.status === 500) {
+        if (pages > 0 && /<title>Page Not Found/i.test(html)) {
+          console.error(`Reached end of review listing at ${currentUrl}`);
+          break;
+        }
+        response = await fetchWithRetries(currentUrl);
+        html = await response.text();
+      }
       const $ = cheerio.load(html);
       const reviewUrls = new Set();
 
