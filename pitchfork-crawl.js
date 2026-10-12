@@ -17,7 +17,8 @@ const USER_AGENT =
 
 function usage() {
   console.error(
-    "Usage: pnpm pitchfork:crawl [--delay-ms <milliseconds>] [--verbose]",
+    "Usage: pnpm pitchfork:crawl [--delay-ms <milliseconds>] [--verbose]\n" +
+      "       pnpm pitchfork:update [--since <YYYY-MM-DD>] [--margin-days <days>] [--delay-ms <milliseconds>] [--verbose]",
   );
 }
 
@@ -30,13 +31,44 @@ function parseInteger(value, name) {
 }
 
 function parseArguments(argv) {
-  const options = { delayMs: 1500, verbose: false };
+  const options = {
+    delayMs: 1500,
+    verbose: false,
+    update: false,
+    since: null,
+    marginDays: 14,
+  };
 
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
 
     if (argument === "--verbose") {
       options.verbose = true;
+      continue;
+    }
+
+    if (argument === "--update") {
+      options.update = true;
+      continue;
+    }
+
+    if (argument === "--since") {
+      const value = argv[index + 1];
+      if (value === undefined || Number.isNaN(Date.parse(value))) {
+        throw new Error("--since requires a date such as 2026-06-01");
+      }
+      options.since = new Date(value);
+      index += 1;
+      continue;
+    }
+
+    if (argument === "--margin-days") {
+      const value = argv[index + 1];
+      if (value === undefined) {
+        throw new Error("--margin-days requires a value");
+      }
+      options.marginDays = parseInteger(value, "--margin-days");
+      index += 1;
       continue;
     }
 
@@ -55,6 +87,12 @@ function parseArguments(argv) {
 
   if (options.delayMs < 0) {
     throw new Error("--delay-ms must be zero or greater");
+  }
+  if (options.marginDays < 0) {
+    throw new Error("--margin-days must be zero or greater");
+  }
+  if ((options.since || options.marginDays !== 14) && !options.update) {
+    throw new Error("--since and --margin-days require --update");
   }
 
   return options;
@@ -176,6 +214,15 @@ function ensureSchema(database) {
         query text primary key,
         next_url text,
         completed integer not null default 0
+      );
+
+      create table if not exists update_runs (
+        id integer primary key,
+        started_at text not null,
+        cutoff text not null,
+        completed_at text,
+        pages integer not null default 0,
+        inserted integer not null default 0
       );
     `);
   })();
@@ -372,6 +419,16 @@ if (options) {
     },
   );
 
+  const storeListingPage = database.transaction((reviewUrls) => {
+    let inserted = 0;
+
+    for (const reviewUrl of reviewUrls) {
+      inserted += insertReviewUrl.run(reviewUrl, null).changes;
+    }
+
+    return inserted;
+  });
+
   let lastRequestStartedAt = 0;
 
   async function waitForRequestSlot() {
@@ -443,7 +500,7 @@ if (options) {
     throw new Error(`Request retries exhausted for ${url}`);
   }
 
-  try {
+  async function crawlArtists() {
     for (const query of SEARCH_QUERIES) {
       const state = getSearchState.get(query);
       if (state?.completed) {
@@ -649,6 +706,133 @@ if (options) {
     console.error(
       `Done. Artists: ${countArtists.get().count}. Review URLs: ${countReviews.get().count}. Pages visited: ${countVisitedPages.get().count}.`,
     );
+  }
+
+  function updateCutoff() {
+    if (options.since) {
+      return options.since;
+    }
+
+    // Start from the last completed update, or from when the full crawl began.
+    const { last_started_at: lastStartedAt } = database
+      .prepare(
+        "select max(started_at) as last_started_at from update_runs where completed_at is not null",
+      )
+      .get();
+    const { first_found_at: firstFoundAt } = database
+      .prepare("select min(found_at) as first_found_at from review_urls")
+      .get();
+    const reference = lastStartedAt ?? firstFoundAt;
+    if (!reference) {
+      throw new Error(
+        "No existing reviews to update from. Run pnpm pitchfork:crawl first, or pass --since.",
+      );
+    }
+
+    const referenceDate = new Date(`${reference.replace(" ", "T")}Z`);
+    return new Date(
+      referenceDate.getTime() - options.marginDays * 24 * 60 * 60 * 1000,
+    );
+  }
+
+  async function crawlRecentReviews() {
+    const cutoff = updateCutoff();
+    const startedAt = new Date().toISOString().replace("T", " ").slice(0, 19);
+    const runId = database
+      .prepare("insert into update_runs (started_at, cutoff) values (?, ?)")
+      .run(startedAt, cutoff.toISOString()).lastInsertRowid;
+    const updateRun = database.prepare(`
+      update update_runs
+      set pages = ?, inserted = ?, completed_at = ?
+      where id = ?
+    `);
+
+    console.error(
+      `Updating from review listing until reviews published before ${cutoff.toISOString()}`,
+    );
+
+    let pageUrl = new URL("/reviews/albums/", BASE_URL);
+    pageUrl.searchParams.set("page", "1");
+    const seenPages = new Set();
+    let pages = 0;
+    let totalInserted = 0;
+
+    while (pageUrl) {
+      const currentUrl = pageUrl.href;
+      if (seenPages.has(currentUrl)) {
+        throw new Error(`Listing pagination loop detected at ${currentUrl}`);
+      }
+      seenPages.add(currentUrl);
+      if (options.verbose) {
+        console.error(`Fetching ${currentUrl}`);
+      }
+
+      const response = await fetchWithRetries(currentUrl);
+      const html = await response.text();
+      const $ = cheerio.load(html);
+      const reviewUrls = new Set();
+
+      $("a[href]").each((_, element) => {
+        const reviewUrl = normalizeReviewUrl(
+          $(element).attr("href"),
+          currentUrl,
+        );
+        if (reviewUrl) {
+          reviewUrls.add(reviewUrl);
+        }
+      });
+
+      const pubDates = [...html.matchAll(/"pubDate":"([^"]+)"/g)]
+        .map(([, value]) => Date.parse(value))
+        .filter((value) => !Number.isNaN(value));
+      if (reviewUrls.size === 0 || pubDates.length === 0) {
+        throw new Error(
+          `Found no reviews or publish dates on listing page ${currentUrl}; page layout may have changed`,
+        );
+      }
+
+      const inserted = storeListingPage(reviewUrls);
+      pages += 1;
+      totalInserted += inserted;
+      updateRun.run(pages, totalInserted, null, runId);
+
+      const newest = new Date(Math.max(...pubDates));
+      const oldest = new Date(Math.min(...pubDates));
+      console.error(
+        `Listing page ${pages}: ${oldest.toISOString().slice(0, 10)} to ${newest.toISOString().slice(0, 10)}, ${inserted} new reviews, ${countReviews.get().count} total reviews`,
+      );
+
+      if (oldest < cutoff) {
+        break;
+      }
+
+      const nextUrl = findNextPage($, currentUrl);
+      pageUrl = nextUrl ? new URL(nextUrl) : null;
+      if (
+        pageUrl &&
+        (pageUrl.origin !== BASE_URL || pageUrl.pathname !== "/reviews/albums/")
+      ) {
+        throw new Error(`Refusing unexpected next-page URL: ${nextUrl}`);
+      }
+    }
+
+    updateRun.run(
+      pages,
+      totalInserted,
+      new Date().toISOString().replace("T", " ").slice(0, 19),
+      runId,
+    );
+    console.error(
+      `Done. ${totalInserted} new reviews from ${pages} listing pages. Review URLs: ${countReviews.get().count}.`,
+    );
+  }
+
+  try {
+    if (options.update) {
+      await crawlRecentReviews();
+    } else {
+      await crawlArtists();
+    }
   } finally {
     database.close();
   }

@@ -41,6 +41,22 @@ rate-limited artist pages use the same skipped-page retry flow.
 An existing database from the previous year-search crawler is migrated in
 place, preserving its collected review URLs.
 
+### Incremental updates
+
+After a full crawl, add reviews published since then without recrawling
+every artist:
+
+```sh
+pnpm pitchfork:update
+```
+
+This walks `/reviews/albums/` from the newest page and stops after the first
+page containing reviews published before the cutoff. The cutoff is the start
+of the last completed update (or, for the first update, when the full crawl
+began) minus a 14-day safety margin. Override it with `--margin-days <days>`
+or an explicit `--since <YYYY-MM-DD>`. Runs are recorded in the `update_runs`
+table. Reviews found this way have a null `artist_url`.
+
 Export the stored review URLs as a sorted newline-separated text file:
 
 ```sh
